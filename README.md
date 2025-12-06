@@ -1,26 +1,17 @@
 # Rottsmoth Gully
 ## An attempt at Non-Linear Story-Telling Using Directed Acyclic Graphs
 
-**LINK TO LIVE VERSION** [Play around with what I've got here](https://de-mark.github.io/rottsmoth_gully/)
+**LINK TO LIVE VERSION** [Play around with what I've got here](https://dsp-mark.github.io/rottsmoth_gully/)
 
 ![Example of the index](./screenshots/homepage.png)
 ![Example of character creation](./screenshots/example_character_creation.png)
 
-**QUICK NOTE TO EVERYONE** Has not yet been optimized for non-desktop screens.
-
-**QUICK NOTE TO PROFESSORS** Sorry to change the project from what was initially described in the proposal! Initially, I was intending to display the nodes of the DAG in a graph using JavaScript--which turned out to be a time and a half. Initially, I was thinking of using [D3-DAG](https://erikbrinkman.github.io/d3-dag/) or [Plotly](https://community.plotly.com/t/directed-network-graph-in-javascript/3184), but neither worked too well for displaying a scene.
-
-I was going to switch to using Python and Streamlit, but this had a similar issue, where [Plotly](https://plotly.com/python/network-graphs/) isn't intended to add details to the nodes and [NetworkX](https://networkx.org/documentation/stable/reference/drawing.html) uses static / non-detailed versions. 
-
-Since we had a limited amount of time to throw things together and designing a graph display system which integrated adding, removing, updating etc scenes and connections would take a much longer time with my limited skillset, I switched things around to creating the Non-Linear story with the DAG myself and then allowing the player to navigate it with choices and the like. 
-
-Sorry again for the last minute change! Hopefully it's at least a bit fun to peruse through!
 
 ## WHAT IS THIS
 
-This is a Non-Linear story that I've thrown together using a Directed Acyclic Graph (DAG) in which dialog options open up depending on the character's stats, skills, and past options.
+This is a Non-Linear prototype that I've thrown together using a Directed Acyclic Graph (DAG) in which dialog options open up depending on the character's stats, skills, and past options.
 
-The story isn't even close to complete--I just wanted to experiment with using a DAG to accomplish navigating a non-linear story. 
+It's nowhere near complete--I just wanted to experiment with using a DAG to accomplish navigating a non-linear story. 
 
 It's all written in vanilla JavaScript within the span of 3 days and I added some 5 second MS Paint doodles to boot. If I get the time later, I'd like to come back and finish this--but as programmers, we all know what those words mean. 
 
@@ -120,19 +111,6 @@ If statements.
 Look, if you thought I was hiding the next big thing on this, I'm sorry. But the function legit just has a long line of if statements that take the current edge, check the edgeType and compare it with the respective conditions in the character. If the condition matches, the connection will be displayed for the user to see and potentially select. If not, the connection is not added to the page.
 
 So, for example, if you have a perception of 1, and there's an edgeType of `perception_high`, you won't see the connection since it requires a minimum perception of 3. 
-
-## WHY LOVECRAFT TRASH MONSTERS?
-
-Because my default writing anything is Cosmic Horror and I needed to throw something together in less than three days (I spent a long time trying to get the word processor DAG to display and abdanonned the idea pretty late in). Also, I'm borderline obsessed with waste management and trash, so that winds up leaking into everything I create / work on.
-
-
-## WHY "ROTTSMOTH GULLY" / FIVE SECOND MONOCHROME MS PAINT PORTRAITS?
-
-Bro I had three days okay. (Also, I thought of "Rottswell" too late into the game. DANG IT.)
-
-## IF YOU ONLY HAD THREE DAYS WHY DID YOU MAKE A BILLION UNPLAYABLE CHARACTERS?
-
-Have you MET me?
 
 ## WHAT DOES THE ACTUAL DAG LOOK LIKE SO THAT I CAN DOUBLE-CHECK WHETHER YOUR EDGETYPES ARE WORKING AS INTENDED?
 
